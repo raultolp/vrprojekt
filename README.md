@@ -1,2 +1,2 @@
 # vrprojekt
-Veebriakenduse projekt
+Veebirakenduse projekt
