@@ -13,5 +13,6 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         http.cors().and().csrf().disable();
         // by default allow requests to any URL
         http.authorizeRequests().antMatchers("/**").permitAll();
+        //
     }
 }
