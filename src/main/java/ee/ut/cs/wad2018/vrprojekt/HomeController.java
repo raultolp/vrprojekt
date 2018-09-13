@@ -13,7 +13,7 @@ public class HomeController {
     public String getTestPage() {
         return "home/index";
     }
-    // Same as @RequestMapping(method = RequestMethod.GET)/
+    /// Same as @RequestMapping(method = RequestMethod.GET)/
     @GetMapping(path = "/test-dynamic")
     public String getTest2Page(
             @RequestParam(value="name-from-url",
