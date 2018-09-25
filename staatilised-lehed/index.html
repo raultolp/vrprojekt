@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Lehe pealkiri</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(function() {
+			$(".extend-options").click(function () {
+				if($(this).data("to-extend")) {
+					var extendingClass = $(this).data("to-extend");
+					$("." + extendingClass).slideToggle();
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="main" class="login-screen">
+		<div class="introduction">
+			Introduction
+		</div>
+		<div class="login-modal">
+			<h1>Sisene</h1>
+			<form action="">
+				<input type="text" placeholder="Email">
+				<input type="password" placeholder="Parool">
+				<input type="button" class="btn green" value="Sisene">
+			</form>
+			<h3 class="extend-options" data-to-extend="alt-logins">Muud võimalused sisenemiseks</h3>
+			<div class="alt-logins" style="display: none;">
+				<div class="btn smart-id">SmartID</div>
+				<div class="btn google">Google</div>
+				<div class="btn facebook">Facebook</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
