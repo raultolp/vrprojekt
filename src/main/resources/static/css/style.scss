@@ -34,12 +34,14 @@ a {
 }
 
 .title {
-	font-family: "Gentona Semibold";
+	font-family: "Gentona";
+	font-weight: 600;
 	color: $dark-blue;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: "Gentona Semibold";
+	font-family: "Gentona";
+	font-weight: 600;
 	color: $dark-blue;
 }
 
@@ -166,10 +168,6 @@ ul, li {
 					color: $dark-green;
 					border-color: $dark-green;
 				}
-
-				&:active li{
-
-				}
 			}
 		}
 	}
@@ -218,10 +216,6 @@ ul, li {
 					border-radius: 1em;
 					margin: 0 .8em 0 0;
 				}
-			}
-
-			.settings::after {
-
 			}
 		}
 
@@ -349,7 +343,7 @@ ul, li {
 				margin: .8em 0;
 				padding: .6em .9em .5em;
 				border-radius: .5em;
-				display: inline;
+				display: inline-block;
 				border: solid 1px $green;
 				width: 110px;
 				outline: none;

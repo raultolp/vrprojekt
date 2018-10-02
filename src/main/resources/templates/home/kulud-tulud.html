@@ -1,0 +1,45 @@
+<div th:replace="page-components/header"></div>
+<body>
+	<div id="main" class="add-expenses-screen">
+			<div th:replace="page-components/sidebar"></div>
+
+			<div class="main-window">
+				<h1 th:text="${pageTitle}"></h1>
+				<div class="filter">
+					<div class="description">Sorteeri</div>
+					<div class="option">Kõik</div>
+					<div class="option active">Tulud</div>
+					<div class="option">Kulud</div>
+				</div>
+
+				<div class="filter">
+					<div class="description">Ajavahemik</div>
+					<input type="text" class="field" placeholder="PP/KK/AAAA" title="Alguskuupäev"> - <input type="text" class="field" placeholder="PP/KK/AAAA" title="Lõppkuupäev">
+				</div>
+				<table>
+					<tr class="income">
+						<td class="date">29.09.2018</td>
+						<td class="tags"><span data-tag="Palk">Palk</span></td>
+						<td class="amount">+1000.00€</td>
+					</tr>
+					<tr class="expense">
+						<td class="date">10.09.2018</td>
+						<td class="tags"><span data-tag="Toit">Toit</span></td>
+						<td class="amount">-37.89€</td>
+					</tr>
+					<tr class="expense">
+						<td class="date">09.09.2018</td>
+						<td class="tags"><span data-tag="Toit">Toit</span></td>
+						<td class="amount">-2.15€</td>
+					</tr>
+					<tr class="expense">
+						<td class="date">27.08.2018</td>
+						<td class="tags"><span data-tag="Kino">Kino</span><span data-tag="Meelelahutus">Meelelahutus</span></td>
+						<td class="amount">-10.40€</td>
+					</tr>
+				</table>
+			</div>
+
+	</div>
+</body>
+</html>

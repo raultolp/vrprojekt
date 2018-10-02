@@ -18,7 +18,7 @@ html {
   box-sizing: inherit;
 }
 
-.container, #main {
+.container {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
@@ -26,22 +26,22 @@ html {
   margin-left: auto;
 }
 @media (min-width: 576px) {
-  .container, #main {
+  .container {
     max-width: 540px;
   }
 }
 @media (min-width: 768px) {
-  .container, #main {
+  .container {
     max-width: 720px;
   }
 }
 @media (min-width: 992px) {
-  .container, #main {
+  .container {
     max-width: 960px;
   }
 }
 @media (min-width: 1200px) {
-  .container, #main {
+  .container {
     max-width: 1140px;
   }
 }
@@ -54,7 +54,7 @@ html {
   margin-left: auto;
 }
 
-.row, .login-screen {
+.row, .add-expenses-screen {
   display: flex;
   flex-wrap: wrap;
   margin-right: -15px;
@@ -71,7 +71,7 @@ html {
   padding-left: 0;
 }
 
-.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .login-screen > div, .col,
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .login-screen > div, .new-actions-screen > div, .add-expenses-screen .sidebar, .add-expenses-screen .main-window, .col,
 .col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm,
 .col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md,
 .col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg,
@@ -151,7 +151,7 @@ html {
   max-width: 91.6666666667%;
 }
 
-.col-12, .login-screen > div {
+.col-12, .login-screen > div, .new-actions-screen > div, .add-expenses-screen .sidebar, .add-expenses-screen .main-window {
   flex: 0 0 100%;
   max-width: 100%;
 }
@@ -464,7 +464,7 @@ html {
     max-width: 16.6666666667%;
   }
 
-  .col-md-3 {
+  .col-md-3, .add-expenses-screen .sidebar {
     flex: 0 0 25%;
     max-width: 25%;
   }
@@ -494,7 +494,7 @@ html {
     max-width: 66.6666666667%;
   }
 
-  .col-md-9 {
+  .col-md-9, .add-expenses-screen .main-window {
     flex: 0 0 75%;
     max-width: 75%;
   }
@@ -670,7 +670,7 @@ html {
     max-width: 58.3333333333%;
   }
 
-  .col-lg-8 {
+  .col-lg-8, .add-expenses-screen .main-window {
     flex: 0 0 66.6666666667%;
     max-width: 66.6666666667%;
   }
@@ -846,7 +846,7 @@ html {
     max-width: 50%;
   }
 
-  .col-xl-7 {
+  .col-xl-7, .add-expenses-screen .main-window {
     flex: 0 0 58.3333333333%;
     max-width: 58.3333333333%;
   }
@@ -1810,76 +1810,30 @@ body {
   font-family: Roboto, Arial, sans-serif;
 }
 
+a {
+  text-decoration: none;
+}
+
+.title, .add-expenses-screen .sidebar .user .name a {
+  font-family: "Gentona Semibold";
+  color: #001b47;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "Gentona Semibold";
-  color: #001435;
+  color: #001b47;
 }
 
-input[type="text"], input[type="password"], .btn {
-  display: inline-block;
-  position: relative;
-  top: -5px;
-  right: -5px;
-  margin: .5em 0;
-  padding: .5em .8em;
-  background: #FFF;
-  border: .2em solid #333;
-  border-radius: 1em;
-  outline: none;
-  box-shadow: -5px 5px 0 #333;
-  font-family: "Gentona Semibold";
-  font-size: 1.3em;
-  color: #333;
-  -webkit-user-select: none;
-  transition: 100ms;
-}
-
-.btn {
-  cursor: pointer;
-}
-.btn:active {
-  top: 0;
-  right: 0;
-  box-shadow: none !important;
-}
-.btn.sm {
-  font-size: 1em;
-}
-.btn.green {
-  border-color: #0ab970;
-  color: #0ab970;
-  box-shadow: -5px 5px 0 #0ab970;
-}
-.btn.smart-id {
-  border-color: #00aca7;
-  color: #00aca7;
-  box-shadow: -5px 5px 0 #00aca7;
-}
-.btn.google {
-  border-color: #dd4b39;
-  color: #dd4b39;
-  box-shadow: -5px 5px 0 #dd4b39;
-}
-.btn.facebook {
-  border-color: #3b5998;
-  color: #3b5998;
-  box-shadow: -5px 5px 0 #3b5998;
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 #main {
   position: relative;
   margin: 0 auto;
   padding: 0;
-}
-@media (min-width: 768px) {
-  #main {
-    width: 90%;
-  }
-}
-@media (min-width: 992px) {
-  #main {
-    width: 80%;
-  }
 }
 
 .login-screen {
@@ -1924,6 +1878,7 @@ input[type="text"], input[type="password"], .btn {
 .login-screen .alt-logins {
   margin: 0 auto;
   width: 80%;
+  display: none;
 }
 .login-screen .alt-logins .btn {
   display: block;
@@ -1940,7 +1895,7 @@ input[type="text"], input[type="password"], .btn {
   mask: url(../site-images/arrow.svg) no-repeat 100% 100%;
   -webkit-mask-size: contain;
   mask-size: contain;
-  background-color: #001435;
+  background-color: #001b47;
   height: .6em;
   width: .9em;
   top: -.03em;
@@ -1948,4 +1903,235 @@ input[type="text"], input[type="password"], .btn {
   transform: rotate(0deg);
 }
 
-/*# sourceMappingURL=style.css.map */
+.new-actions-screen {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .new-actions-screen {
+    width: 70% !important;
+  }
+}
+@media (min-width: 992px) {
+  .new-actions-screen {
+    width: 55% !important;
+  }
+}
+@media (min-width: 1200px) {
+  .new-actions-screen {
+    width: 40% !important;
+  }
+}
+.new-actions-screen > div {
+  font-size: 1.3rem;
+  padding: 2em;
+}
+.new-actions-screen .actions-modal {
+  position: relative;
+  text-align: center;
+  background: #FFF;
+  text-transform: uppercase;
+}
+.new-actions-screen .actions-modal h1 {
+  margin-bottom: 1em;
+  text-transform: uppercase;
+}
+.new-actions-screen .actions-modal ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.new-actions-screen .actions-modal ul a {
+  color: #333;
+  text-decoration: none;
+}
+.new-actions-screen .actions-modal ul a li {
+  font-family: "Sailec";
+  border: solid 1px #0ab970;
+  color: #0ab970;
+  transition: 200ms;
+  transition-property: color, border-color;
+  margin: .8em 0;
+  padding: 1em;
+  border-radius: .5em;
+}
+.new-actions-screen .actions-modal ul a:hover li {
+  color: #11885a;
+  border-color: #11885a;
+}
+
+.add-expenses-screen {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+.add-expenses-screen .sidebar {
+  padding: 0;
+  background: #FFF;
+  z-index: 99999;
+}
+@media (max-width: 767.98px) {
+  .add-expenses-screen .sidebar {
+    box-shadow: 0 -1px 30px 0px rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .add-expenses-screen .sidebar {
+    box-shadow: 1px 0 30px 0px rgba(0, 0, 0, 0.05);
+    border-right: 1px solid rgba(0, 0, 0, 0.15);
+  }
+}
+.add-expenses-screen .sidebar .user {
+  width: 100%;
+  display: block;
+  border-bottom: solid 1px #EEE;
+}
+.add-expenses-screen .sidebar .user span a {
+  padding: 1.5em;
+  display: inline-block;
+}
+.add-expenses-screen .sidebar .user .name a {
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+}
+.add-expenses-screen .sidebar .user .name a img {
+  width: 2em;
+  border-radius: 1em;
+  margin: 0 .8em 0 0;
+}
+.add-expenses-screen .sidebar ul.menu li a {
+  width: 100%;
+  display: inline-block;
+  padding: 1.5em 2em;
+  font-family: "Sailec";
+  color: #333;
+}
+.add-expenses-screen .sidebar ul.menu li a:hover, .add-expenses-screen .sidebar ul.menu li a.active {
+  background: #EFEFEF;
+}
+.add-expenses-screen .main-window {
+  margin: 0 auto;
+  background: #FFF;
+  padding: 2em;
+}
+.add-expenses-screen .main-window h1, .add-expenses-screen .main-window h2, .add-expenses-screen .main-window h3 {
+  margin: 0 0 1em;
+}
+.add-expenses-screen .main-window input {
+  display: block;
+}
+.add-expenses-screen .main-window table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: 0 0 0px 1px #001b47;
+}
+.add-expenses-screen .main-window table tr {
+  width: 100%;
+  border-bottom: 1px solid #001b47;
+}
+.add-expenses-screen .main-window table tr:last-of-type {
+  border-bottom: none;
+}
+.add-expenses-screen .main-window table tr td.amount {
+  font-weight: bold;
+  text-align: right;
+}
+.add-expenses-screen .main-window table tr.income td.amount {
+  color: #44a80e;
+}
+.add-expenses-screen .main-window table tr.expense td.amount {
+  color: #fe4646;
+}
+.add-expenses-screen .main-window table tr .tags span {
+  margin: 0 .3em;
+  padding: .3em .6em .25em;
+  border-radius: .5em;
+  display: inline;
+  border: solid 1px;
+  font-size: .8em;
+}
+.add-expenses-screen .main-window table td {
+  padding: 1em;
+}
+.add-expenses-screen .main-window .filter {
+  margin: 0 0 .7em .2em;
+  font-family: "Sailec";
+  display: block;
+}
+.add-expenses-screen .main-window .filter:last-of-type {
+  margin: 0 0 1.5em .2em;
+}
+.add-expenses-screen .main-window .filter .description {
+  display: inline;
+  margin-right: 1em;
+  pointer-events: none;
+  color: #0ab970;
+}
+.add-expenses-screen .main-window .filter .description::after {
+  display: inline;
+  content: ":";
+}
+.add-expenses-screen .main-window .filter .option {
+  transition: 200ms;
+  transition-property: color, border-color;
+  margin: .8em 0;
+  padding: .6em .9em .5em;
+  border-radius: .5em;
+  display: inline;
+  cursor: pointer;
+}
+.add-expenses-screen .main-window .filter .option.active {
+  border: solid 1px #0ab970;
+  color: #0ab970;
+}
+.add-expenses-screen .main-window .filter .option:hover {
+  color: #0ab970;
+  border-color: #11885a;
+}
+.add-expenses-screen .main-window .filter .field {
+  font-family: "Sailec";
+  transition: 200ms;
+  transition-property: color, border-color;
+  margin: .8em 0;
+  padding: .6em .9em .5em;
+  border-radius: .5em;
+  display: inline;
+  border: solid 1px #0ab970;
+  width: 110px;
+  outline: none;
+}
+.add-expenses-screen .switchBtn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  left: 0px;
+  top: -12px;
+  transform: translate3d(0, 0, 0);
+  background: red;
+}
+@keyframes switchOn {
+  0% {
+    transform: scale3d(1, 1, 1) translate3d(0px, 0, 0);
+    transform-origin: left center;
+  }
+  40% {
+    transform: scale3d(1.4, 0.7, 0) translate3d(20px, 0, 0);
+    transform-origin: right center;
+  }
+  70% {
+    transform: scale3d(0.9, 1.15, 1) translate3d(33px, 0, 0);
+  }
+  100% {
+    transform: scale3d(1, 1, 1) translate3d(30px, 0, 0);
+  }
+}
+.add-expenses-screen .switchBtn:hover {
+  animation: switchOn 250ms linear forwards;
+}
+
+/*# sourceMappingURL=style.static.css.map */

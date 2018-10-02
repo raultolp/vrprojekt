@@ -1,0 +1,15 @@
+<div class="sidebar">
+    <div class="user">
+        <span class="name">
+            <a href="#">
+                <img src="site-images/default-profile-img.png" alt="Profiilipilt">
+                Eesnimi Perenimi
+            </a>
+        </span>
+    </div>
+    <ul class="menu">
+        <li><a th:href="@{/}" th:classappend="${#httpServletRequest.getRequestURI() == '/' ? 'active':''}">Minu tulud ja kulud</a></li>
+        <li><a href="#">Rahaplaneerija</a></li>
+        <li><a th:href="@{/stats}" th:classappend="${#httpServletRequest.getRequestURI() == '/stats' ? 'active':''}">Graafikud</a></li>
+    </ul>
+</div>

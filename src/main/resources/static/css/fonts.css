@@ -1,0 +1,23 @@
+@font-face {
+    font-family: Sailec;
+    src: url(../fonts/sailec_regular.otf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Sailec;
+    src: url(../fonts/sailec_bold.otf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Gentona;
+    src: url(../fonts/gentona_bold.otf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Gentona;
+    src: url(../fonts/gentona_semibold.otf);
+    font-weight: 600;
+}
